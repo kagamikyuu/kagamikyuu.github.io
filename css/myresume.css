@@ -5,27 +5,17 @@ body {
 }
 
 h1 {
-	font-family: inherit;
+	font-family: "Noto Sans", "Noto Sans TC";
 	text-transform: none;
 	line-height: 6rem;
 }
 
 h2 {
 	font-family: inherit;
-	text-transform: none;
-	line-height: 6rem;
 }
 
 h3 {
 	font-family: inherit;
-	text-transform: none;
-	line-height: 6rem;
-}
-
-.subheading {
-	font-family: inherit;
-	text-transform: none;
-	margin-top: 1rem;
 }
 
 .timeline {
@@ -37,13 +27,12 @@ h3 {
   content: '';
   position: absolute;
   width: 6px;
-  background-color: #bd5d38;
+  background-color: #FF8888;
   top: 0;
   bottom: 0;
   left: 50%;
   margin-left: -3px;
 }
-
 .timeline-block {
   padding: 10px 40px;
   position: relative;
@@ -51,55 +40,62 @@ h3 {
   width: 50%;
 }
 
+/* The circles on the timeline */
 .timeline-block::after {
   content: '';
   position: absolute;
   width: 25px;
   height: 25px;
-  right: -12px;
+  right: 263.5px;
   background-color: white;
-  border: 4px solid #bd5d38;
+  border: 4px solid #FF8888;
   top: 15px;
   border-radius: 50%;
   z-index: 1;
 }
 
-/* place the container to the left */
+/* Place the container to the left */
 .timeline-left {
-  left: 0;
+  left: 18%;
 }
 
-/* place the container to the right */
+/* Place the container to the right */
 .timeline-right {
-  left: 50%;
+  left: 52%;
 }
 
-/*Fix the circle for containers on the right side */
+/* Fix the circle for containers on the right side */
 .timeline-right::after {
-  left: -12px;
+  left: -43.5px;
 }
 
-/*Media queries - Responsive timeline on screens less than 992px wide */
+/* Media queries - Responsive timeline on screens less than 992px wide */
 @media screen and (max-width: 992px) {
-/*Place the timeline to the left */
+/* Place the timelime to the left */
   .timeline::after {
-	left: 31px;
+    left: 31px;
   }
   
-  /*Full-width containers */
+  /* Full-width containers */
   .timeline-block {
-	width: 100%;
-	padding-left: 70px;
-	padding-right: 25px;
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
   }
   
-  /*Make all right containers behave like the left ones */
+  /* Make all right containers behave like the left ones */
   .timeline-right {
-	left: 0%;
+    left: 0%;
   }
   
-  /*Make sure all circles are at the same spot */
+  /* Make sure all circles are at the same spot */
   .timeline-left::after, .timeline-right::after {
-	left: 17px;
+    left: 17px;
   }
+}
+
+.subheading {
+	font-family: "Noto Sans", "Noto Sans TC";
+	text-transform: none;
+	margin-top: 1rem;
 }
